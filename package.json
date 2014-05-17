@@ -1,0 +1,28 @@
+{
+  "name": "hijri",
+  "version": "0.5.0",
+  "description": "Gregorian to Hijri Date conversion on NodeJS ",
+  "main": "hijri-date.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arabiaweather/hijri-date.git"
+  },
+  "keywords": [
+    "hijri",
+    "calendar",
+    "date",
+    "convertor",
+    "conversion",
+    "convert",
+    "gregorian"
+  ],
+  "author": "Yousef Wadi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arabiaweather/hijri-date/issues"
+  },
+  "homepage": "https://github.com/arabiaweather/hijri-date"
+}
