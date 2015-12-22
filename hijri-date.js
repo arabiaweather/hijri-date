@@ -1,7 +1,3 @@
-function gmod(n,m){
-		return ((n%m)+m)%m;
-}
-
 function basecal(date, adjust){
 	var today = date;
 	if(adjust) {
@@ -9,6 +5,8 @@ function basecal(date, adjust){
 	    todaymili = today.getTime()+adjustmili;
 	    today = new Date(todaymili);
 	}
+	wd = date.getDay() + 1;
+	
 	day = today.getDate();
 	month = today.getMonth();
 	year = today.getFullYear();
@@ -48,9 +46,6 @@ function basecal(date, adjust){
 	    month = ee-13;
 	}
 	year = cc-4716;
-	
-	
-	wd = gmod(jd+1,7)+1;
 	
 		iyear = 10631./30.;
 	epochastro = 1948084;
