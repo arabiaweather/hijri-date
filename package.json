@@ -4,7 +4,8 @@
   "description": "Gregorian to Hijri Date conversion on NodeJS ",
   "main": "hijri-date.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt test",
+    "prepublish": "grunt test"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,40 @@
     "convert",
     "gregorian"
   ],
+  "devDependencies": {
+    "mocha": "~1.12.0",
+    "chai": "~1.8.0",
+    "grunt": "~0.4.1",
+    "grunt-cli": "~0.1.9",
+    "grunt-contrib-watch": "~0.5.2",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-shell": "~0.4.0"
+  },
+  "jshintConfig": {
+    "camelcase": true,
+    "eqeqeq": true,
+    "forin": true,
+    "freeze": true,
+    "immed": true,
+    "indent": 2,
+    "latedef": "nofunc",
+    "newcap": true,
+    "noarg": true,
+    "noempty": true,
+    "nonew": true,
+    "plusplus": true,
+    "quotmark": true,
+    "undef": true,
+    "unused": true,
+    "strict": true,
+    "trailing": true,
+    "asi": true,
+    "eqnull": true,
+    "laxbreak": true,
+    "laxcomma": true,
+    "node": true
+  },
   "author": "Yousef Wadi",
   "license": "MIT",
   "bugs": {
