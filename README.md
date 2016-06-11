@@ -1,7 +1,8 @@
 Gregorian To Hijri date convertor
 ==========
 
-This is a node module that allows you to convert Gregorian Dates to Hijri date with ease, also support day adjustments. 
+This is a node module that allows you to convert Gregorian Dates to Hijri date with ease, also support day adjustments and language support.
+
 
 ### Usage 
 
@@ -15,8 +16,8 @@ npm install hijri
 
 ```javascript
 var hijri = require('hijri');
-//hijri.convert accepts 2 Arguments Date , Date Adjustment by days 
-console.dir(hijri.convert(new Date(), 0));
+//hijri.convert accepts 3 Arguments Date , Date Adjustment by days and language either 'ar': Arabic or 'en': English
+console.dir(hijri.convert(new Date(), 0, 'ar'));
 ```
 ##### Output 
 ```console
@@ -27,3 +28,5 @@ console.dir(hijri.convert(new Date(), 0));
   monthText: 'ربيع الآخر',
   year: 1435 }
 ```
+#### Languages
+Currently only English and Arabic is supported

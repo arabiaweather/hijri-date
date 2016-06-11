@@ -3,6 +3,8 @@
 
 'use strict';
 
+var lang = require('./languages.js');
+
 function basecal(date, adjust){
 	var today = date;
 	if(adjust) {
@@ -83,13 +85,18 @@ function basecal(date, adjust){
 	return myRes;
 }
 
-exports.convert = function (date, adjustment) {
-	var wdNames = new Array('الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت');
-	var iMonthNames = new Array('المحرّم','صفر','ربيع الأوّل','ربيع الآخر',
-	'جمادى الأولى','جمادى الآخرة','رجب',
-	'شعبان',
-	'رمضان','شوّال','ذو القعدة',
-	'ذو الحجّة');
+exports.convert = function (date, adjustment, language) {
+  var wdNames;
+	var iMonthNames;
+  if(language = 'ar') {
+    wdNames = lang.arabic.wdNames;
+    iMonthNames = lang.arabic.MonthNames
+  }
+  if(language = 'en') {
+    wdNames = lang.english.wdNames;
+    iMonthNames = lang.english.MonthNames
+  }
+	
 	var iDate = basecal(date, adjustment);
 	//var outputIslamicDate = wdNames[iDate[4]] + ', '
 	//+ iDate[5] + ' ' + iMonthNames[iDate[6]] + ' ' + iDate[7] + ' AH';
